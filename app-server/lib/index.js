@@ -1,8 +1,13 @@
-import person from "./person.json";
+import person from "../person.json";
 import express from "express";
 
 const app = express();
 app.set("port", (process.env.PORT || 5000));
+
+app.get("", function(request, response, next) {
+    response.writeHead(200, {'Content-Type': 'text/plain'}); 
+    response.end('Hello World\n');
+});
 
 app.get("/people", function(request, response, next) {
     response.send({ "people": person });    
