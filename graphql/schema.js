@@ -11,7 +11,7 @@ import {
     nodeDefinitions,
 } from 'graphql-relay';
 
-const BASE_URL = "localhost:5000";
+const BASE_URL = "localhost:5001";
 
 const {
     nodeInterface,
