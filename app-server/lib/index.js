@@ -10,13 +10,13 @@ app.get("", function(request, response, next) {
 });
 
 app.get("/people", function(request, response, next) {
-    response.send({ "people": person });    
+    response.send({ "person": person });    
 });
 
 app.get("/people/:id", function(request, response) {
     let personId = request.params.id;
     response.send({ 
-        "people": person.filter(p => p.id == personId) 
+        "person": person.filter(p => p.id == personId) 
     });
 });
 
