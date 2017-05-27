@@ -7,12 +7,13 @@ import {
 
 import fetch from "node-fetch";
 
-const BASE_URL = "localhost:5001";
+const BASE_URL = "http://localhost:5000";
 
 function getPersonByURL(relativeUrl) {
     return fetch(`${BASE_URL}${relativeUrl}`)
         .then(res => res.json())
-        .then(json => json.person);
+        .then(json => json.person)
+        .then(person => person[0]);
 }
 
 const PersonType = new GraphQLObjectType({
@@ -33,12 +34,12 @@ const PersonType = new GraphQLObjectType({
         id: {
             type: GraphQLString
         },
-        username: {
+        userName: {
             type: GraphQLString
         },
         friends: {
             type: new GraphQLList(PersonType),
-            resolve: person => person.friends.map(getPersonByURL)
+            resolve: (person) => person.friends.map(getPersonByURL)
         }
     })
 });
@@ -52,7 +53,8 @@ const QueryType = new GraphQLObjectType({
             args: {
                 id: { type: GraphQLString }
             },
-            resolve: (root, args) => getPersonByURL(`/people/${args.id}`)
+            resolve: (root, args) => 
+                getPersonByURL(`/people/${args.id}`)
         }
     })
 });

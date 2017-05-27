@@ -1,9 +1,9 @@
 [
     {
-        "id": 1,
-        "username": "mark1",
+        "id": "1",
+        "userName": "mark1",
         "firstName": "Mark",
-        "lasName": "Zuckerberg",
+        "lastName": "Zuckerberg",
         "email": "mark@facebook.com",
         "friends": [
             "/people/2",
@@ -11,10 +11,10 @@
         ]
     },
     {
-        "id": 2,
-        "username": "sophi009",
+        "id": "2",
+        "userName": "sophi009",
         "firstName": "Sophia",
-        "lasName": "Latchuba",
+        "lastName": "Latchuba",
         "email": "soph@gmail.com",
         "friends": [
             "/people/1",
@@ -22,13 +22,13 @@
         ]
     },
     {
-        "id": 3,
-        "username": "mark1",
+        "id": "3",
+        "userName": "mark1",
         "firstName": "Mark",
-        "lasName": "Zuckerberg",
+        "lastName": "Zuckerberg",
         "email": "mark@facebook.com",
         "friends": [
-            "/people/1",
+            "/people/2",
             "/people/3"    
         ]
     }
