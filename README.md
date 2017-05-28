@@ -15,8 +15,8 @@ To begin installation, go to directory of `package.json` each module.
 1. Inside directory `graphql-restwrapper/app-server` run the node server using `npm start`
 2. Open up new terminal and go to directory Node-GraphQL-module `cd graphql-restwrapper` then run `npm start`
 
-After this operation, you will see two terminal open running on port `5000` and `5001`.
-Since The Node-GraphQL server running on `localhost:5001`, hit `localhost:5001/graphiql` to open Graphiql client.
+After this operation, you have had two terminal opened running on port `5000` and `5001`.
+Since The Node-GraphQL server running on `localhost:5001`, hit `localhost:5001/graphiql` to open `Graphiql` client.
 
 ### GraphQL Request Example
 ```
